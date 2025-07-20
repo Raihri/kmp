@@ -82,6 +82,10 @@
       <a name="width" val="4"/>
     </comp>
     <comp lib="1" loc="(1020,240)" name="AND Gate"/>
+    <comp lib="1" loc="(1030,290)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1130,280)" name="AND Gate"/>
     <comp lib="3" loc="(1190,530)" name="Comparator">
       <a name="mode" val="unsigned"/>
       <a name="width" val="4"/>
@@ -107,9 +111,20 @@
       <a name="max" val="0xf"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="5" loc="(1050,240)" name="LED"/>
+    <comp lib="5" loc="(1170,240)" name="LED"/>
+    <comp lib="5" loc="(1180,280)" name="LED"/>
     <comp lib="5" loc="(50,130)" name="Button"/>
     <comp lib="5" loc="(50,240)" name="Button"/>
+    <comp lib="6" loc="(1248,246)" name="Text">
+      <a name="color" val="#00a600"/>
+      <a name="font" val="SansSerif bold 18"/>
+      <a name="text" val="MATCHED"/>
+    </comp>
+    <comp lib="6" loc="(1255,287)" name="Text">
+      <a name="color" val="#ff0800"/>
+      <a name="font" val="SansSerif bold 18"/>
+      <a name="text" val="WRONG"/>
+    </comp>
     <comp lib="6" loc="(39,224)" name="Text">
       <a name="color" val="#f20000"/>
       <a name="font" val="SansSerif bold 15"/>
@@ -120,14 +135,22 @@
       <a name="font" val="SansSerif bold 15"/>
       <a name="text" val="RESET"/>
     </comp>
-    <wire from="(1020,240)" to="(1050,240)"/>
+    <wire from="(1020,240)" to="(1030,240)"/>
+    <wire from="(1030,240)" to="(1030,260)"/>
+    <wire from="(1030,240)" to="(1170,240)"/>
+    <wire from="(1030,290)" to="(1030,300)"/>
+    <wire from="(1030,300)" to="(1080,300)"/>
     <wire from="(1040,540)" to="(1070,540)"/>
+    <wire from="(1050,260)" to="(1050,340)"/>
+    <wire from="(1050,260)" to="(1080,260)"/>
+    <wire from="(1050,340)" to="(1200,340)"/>
     <wire from="(1070,520)" to="(1070,540)"/>
     <wire from="(1070,520)" to="(1150,520)"/>
     <wire from="(1080,620)" to="(1120,620)"/>
     <wire from="(1100,670)" to="(1110,670)"/>
     <wire from="(1120,620)" to="(1120,630)"/>
     <wire from="(1120,630)" to="(1130,630)"/>
+    <wire from="(1130,280)" to="(1180,280)"/>
     <wire from="(1130,540)" to="(1130,630)"/>
     <wire from="(1130,540)" to="(1150,540)"/>
     <wire from="(1190,530)" to="(1200,530)"/>
@@ -212,7 +235,7 @@
     <wire from="(920,240)" to="(960,240)"/>
     <wire from="(950,260)" to="(950,340)"/>
     <wire from="(950,260)" to="(970,260)"/>
-    <wire from="(950,340)" to="(1200,340)"/>
+    <wire from="(950,340)" to="(1050,340)"/>
     <wire from="(960,220)" to="(960,240)"/>
     <wire from="(960,220)" to="(970,220)"/>
   </circuit>
